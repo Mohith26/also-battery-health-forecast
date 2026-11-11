@@ -21,9 +21,9 @@ Everything on the page is computed in the browser by `core/battery.js` from the 
 
 ## Result (synthetic)
 
-- Rider: weekday commuter, 128 days of history, 32 health readings. Health today 93%; 3-year forecast 77-80% (80% band).
-- On 200 held-out simulated riders the calibrated 3-year 80% band covered 80% of true outcomes (1-year: 81%, 2-year: 81%); the model-only Bayesian band covered 73.5% at 3 years. Median band width about ±1.5 points.
-- What-ifs for this rider: ready-by-ride charging ≈ +1 point of capacity at 3 years and cuts time above 90% charge from 13.5 to 8.2 h/day; parking 5°C cooler ≈ +1.7 points.
+- Rider: weekday commuter, 128 days of history, 32 health readings. Health today 92%; 3-year forecast 74-77% (80% band).
+- On 200 held-out simulated riders the calibrated 3-year 80% band covered 80% of true outcomes (1-year: 81%, 2-year: 81%); the model-only Bayesian band covered 73.5% at 3 years (76.5% and 76% at 1 and 2 years). Median band width about ±1.5 points.
+- What-ifs for this rider: ready-by-ride charging ≈ +1.2 points of capacity at 3 years and cuts time above 90% charge from 13.5 to 8.2 h/day; parking 5°C cooler ≈ +1.7 points.
 
 ## Run it
 
