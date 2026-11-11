@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battery Health · ALSO app concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="stage">
+  <header class="bar">
+    <div class="logo">ALSO.</div>
+    <div class="bar-mid mono">CONCEPT · BATTERY HEALTH FOR THE ALSO APP · TM-B STANDARD BATTERY (522 WH)</div>
+    <div class="bar-r mono" id="riderMeta"></div>
+  </header>
+
+  <section class="phones">
+    <div class="col">
+      <div class="cap mono">KNOW HOW YOUR BATTERY<br>IS REALLY DOING.</div>
+      <div class="phone peach">
+        <div class="sb"><span>9:41</span><span class="sbi">▂▄▆ ◔ ▭</span></div>
+        <div class="toprow"><span class="rbtn"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 5l-7 7 7 7" fill="none" stroke="#111" stroke-width="2"/></svg></span><span class="ttl">Battery</span><span class="rbtn"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
+        <div class="lcd"><div class="lcd-in"><div class="mono lcd-k">HEALTH</div><div class="mono lcd-v"><span id="sohNow"></span><small>%</small></div><div class="mono lcd-s" id="sohNowBand"></div></div></div>
+        <div class="seg mono" id="hzSeg"><button data-h="365">1 YR</button><button data-h="730">2 YR</button><button data-h="1095" class="on">3 YR</button></div>
+        <div class="fc card">
+          <div class="mono fc-k" id="fcK"></div>
+          <div class="fc-v" id="fcV"></div>
+          <svg id="fcChart" viewBox="0 0 300 130" preserveAspectRatio="none"></svg>
+          <div class="mono fc-x"><span>NOW</span><span>1 YR</span><span>2 YR</span><span>3 YR</span></div>
+        </div>
+        <div class="rng card"><div class="mono fc-k">EST. FULL-CHARGE RANGE</div><div class="rng-row"><b id="rngNow"></b><span class="arr">→</span><b id="rngH"></b></div></div>
+        <div class="lockpill"><span class="lk on"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="5" y="10.5" width="14" height="10" rx="1.5" fill="#111"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="#111" stroke-width="2"/></svg></span><span class="lk"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="5" y="10.5" width="14" height="10" rx="1.5" fill="none" stroke="#111" stroke-width="1.8"/><path d="M8 10.5V8a4 4 0 0 1 7.6-1.7" fill="none" stroke="#111" stroke-width="1.8"/></svg></span></div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cap mono">SEE WHAT'S AGING IT,<br>AND WHAT HELPS.</div>
+      <div class="phone lav">
+        <div class="sb"><span>9:41</span><span class="sbi">▂▄▆ ◔ ▭</span></div>
+        <div class="toprow"><span class="rbtn"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 5l-7 7 7 7" fill="none" stroke="#111" stroke-width="2"/></svg></span><span class="ttl">What's aging it</span><span class="rbtn ghost"></span></div>
+        <div class="card split">
+          <div class="mono sk">CAPACITY LOST BY YEAR 3</div>
+          <div class="stack" id="stack"></div>
+          <div class="leg" id="stackLeg"></div>
+        </div>
+        <div class="mono sk pad">TRY A HABIT</div>
+        <div class="whatif" id="whatif"></div>
+        <div class="card result"><div class="mono sk">YEAR-3 HEALTH WITH THESE HABITS</div><div class="res-v" id="resV"></div><div class="mono res-s" id="resS"></div></div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="cap mono">A FORECAST THAT<br>KNOWS ITS LIMITS.</div>
+      <div class="phone white">
+        <div class="sb"><span>9:41</span><span class="sbi">▂▄▆ ◔ ▭</span></div>
+        <div class="toprow"><span class="rbtn"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M15 5l-7 7 7 7" fill="none" stroke="#111" stroke-width="2"/></svg></span><span class="ttl"></span><span class="rbtn ghost"></span></div>
+        <h2 class="big">How sure is this?</h2>
+        <div class="tag mono" id="basis"></div>
+        <p class="body" id="howBody"></p>
+        <div class="calib" id="calib"><div class="mono sk">CHECKING ON 500 SIMULATED RIDERS…</div></div>
+        <div class="obtn mono">HOW IT WORKS</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="eng">
+    <div class="ecard">
+      <div class="mono ek">FOR ENGINEERS · HEALTH READINGS AND FIT</div>
+      <svg id="fitChart" viewBox="0 0 560 190" preserveAspectRatio="none"></svg>
+      <p class="enote" id="fitNote"></p>
+    </div>
+    <div class="ecard">
+      <div class="mono ek">MODEL</div>
+      <p class="enote">Calendar loss = a(V,T)·t<sup>0.75</sup>, a = (7.543·V − 23.75)·10<sup>6</sup>·e<sup>−6976/T</sup>; cycle loss = (7.348·10<sup>−3</sup>(V̄−3.667)² + 7.6·10<sup>−4</sup> + 4.081·10<sup>−3</sup>·DoD)·√Ah (Schmalstieg et al. 2014, NMC). Stress is integrated every 15 minutes from the bike's state of charge and temperature with the equivalent-time method, so parked-full hours, heat and riding each add their share.</p>
+      <p class="enote">A rider-specific scale k is fitted from health readings at charge sessions (grid posterior, lognormal prior). The band is then widened by split conformal calibration on simulated riders whose calendar and cycle aging deviate from the model by ±20%, so the 80% band holds even when the physics model is off.</p>
+    </div>
+  </section>
+  <footer class="foot mono">Unofficial concept demo by Mohith Gajjela. Not affiliated with ALSO. Synthetic data.</footer>
+</div>
+<script src="core/battery.js"></script>
+<script src="data/rider.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
